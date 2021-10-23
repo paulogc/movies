@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "AndadaPro";
+  src: url(/fonts/AndadaPro-VariableFont_wght.ttf);
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "AndadaPro";
+  src: url(/fonts/AndadaPro-Italic-VariableFont_wght.ttf);
+  font-weight: 400;
+  font-style: italic
+}
