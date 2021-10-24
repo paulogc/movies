@@ -28,14 +28,13 @@ export const Title = styled.h4`
   max-width: 250px;
 `;
 
-export const AddButton = styled.div(
-  ({ theme }) => css`
+export const AddButton = styled.div<{ onPlaylist: boolean }>(
+  ({ theme, onPlaylist = false }) => css`
     cursor: pointer;
     position: relative;
     overflow: hidden;
 
     ::after {
-      content: "Add to playlist";
       height: 10px;
       font-size: 28px;
       color: ${theme.color.fontWhite};
@@ -46,7 +45,7 @@ export const AddButton = styled.div(
     }
 
     ::before {
-      content: "+";
+      content: "✓";
       height: 10px;
       font-size: 55px;
       color: ${theme.color.fontWhite};
@@ -56,6 +55,24 @@ export const AddButton = styled.div(
       transition: top 0.2s linear;
       z-index: 2;
     }
+
+    ${onPlaylist
+      ? css`
+          ::after {
+            content: "On playlist";
+          }
+          ::before {
+            content: "✓";
+          }
+        `
+      : css`
+          ::after {
+            content: "Add to playlist";
+          }
+          ::before {
+            content: "+";
+          }
+        `}
 
     :hover {
       ::after {

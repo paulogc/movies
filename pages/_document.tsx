@@ -33,6 +33,16 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <link href="/css/fonts.css" rel="stylesheet" />
+          <style>
+            {`
+              #__next {
+                margin: 0;
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+              }
+            `}
+          </style>
         </Head>
         <body>
           <Main />

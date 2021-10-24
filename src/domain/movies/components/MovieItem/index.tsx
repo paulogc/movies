@@ -7,22 +7,31 @@ import {
   Title,
   TextContainer,
 } from "./styles";
-import { usePlaylistContext } from "../../../../context/PlaylistContext";
+import { usePlaylistContext } from "../../../../../app/context/PlaylistContext";
+import type { Movie } from "../../types";
 
-export const MovieItem = ({ movie }) => {
+interface MovieItemProps {
+  movie: Movie;
+}
+
+export const MovieItem = ({ movie }: MovieItemProps) => {
   const { playlist, updatePlaylist } = usePlaylistContext();
 
-  const isMovieOnThePlaylist = !!playlist[movie.id];
+  const onPlaylist = !!playlist[movie.id];
 
   const handleAddToPlaylist = () => {
-    if (!isMovieOnThePlaylist) {
+    if (!onPlaylist) {
       updatePlaylist(movie);
     }
   };
 
   return (
     <Wrapper>
-      <AddButton onClick={handleAddToPlaylist} role="button">
+      <AddButton
+        role="button"
+        onClick={handleAddToPlaylist}
+        onPlaylist={onPlaylist}
+      >
         <ImageContainer>
           <NextImage
             alt={`Poster ${movie.title}`}

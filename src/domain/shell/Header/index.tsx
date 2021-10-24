@@ -1,10 +1,15 @@
 import React from "react";
+import Link from "next/link";
+import { PlaylistCount } from "../../playlist/PlaylistCount";
 import { StyledHeader, Text } from "./styles";
 
 const Header = () => {
   return (
     <StyledHeader>
-      <Text>Movies</Text>
+      <Link href="/">
+        <Text>Movies</Text>
+      </Link>
+      <PlaylistCount />
     </StyledHeader>
   );
 };
