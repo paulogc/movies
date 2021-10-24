@@ -6,6 +6,7 @@ import { normalizeMovies } from "../src/domain/movies/helpers/normalizeMovies";
 import { Search } from "../src/domain/movies/components/Search";
 import { Button } from "../src/ui/Button";
 import type { Movie } from "../src/domain/movies/types";
+import { ButtonContainer } from "../src/domain/movies/components/Page/styles";
 
 interface HomePageProps {
   movies: Movie[];
@@ -36,11 +37,11 @@ export default function Home({ movies, search, page, total }: HomePageProps) {
     <PageContainer>
       <Search />
       <MovieList movies={loadedMovies} search={search} />
-      <div id="bottom">
+      <ButtonContainer>
         {displayLoadMore && (
           <Button label="Load More" onClick={handleLoadMore} />
         )}
-      </div>
+      </ButtonContainer>
     </PageContainer>
   );
 }
