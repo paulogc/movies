@@ -13,7 +13,7 @@ import { Button } from "../../src/ui/Button";
 
 export async function getServerSideProps({ query }) {
   const res = await fetch(
-    `http://www.omdbapi.com/?i=${query.id}&plot=full&type=movie&apikey=c5730e0`
+    `https://www.omdbapi.com/?i=${query.id}&plot=full&type=movie&apikey=c5730e0`
   );
   const movie = await res.json();
 

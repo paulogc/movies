@@ -48,7 +48,7 @@ export default function Home({ movies, search, page, total }: HomePageProps) {
 Home.getInitialProps = async ({ query }) => {
   if (query.search) {
     const res = await fetch(
-      `http://www.omdbapi.com/?s=${query.search}&page=${query.page}&type=movie&apikey=c5730e0`
+      `https://www.omdbapi.com/?s=${query.search}&page=${query.page}&type=movie&apikey=c5730e0`
     );
     const { Search, totalResults } = await res.json();
     return {
