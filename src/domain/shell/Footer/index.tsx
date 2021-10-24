@@ -5,7 +5,6 @@ import theme from "../../../../app/theme/default";
 
 const Header = () => {
   const { pathname } = useRouter();
-  console.log(pathname);
   const isConfirmationScreen = pathname.includes("confirm");
 
   return (
