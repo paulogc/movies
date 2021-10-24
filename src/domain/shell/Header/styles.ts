@@ -14,5 +14,6 @@ export const StyledHeader = styled.header(
 export const Text = styled.h5(
   ({ theme }) => css`
     color: ${theme.color.fontWhite};
+    cursor: pointer;
   `
 );

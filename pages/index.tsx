@@ -35,7 +35,7 @@ export default function Home({ movies, search, page, total }: HomePageProps) {
   return (
     <PageContainer>
       <Search />
-      <MovieList movies={loadedMovies} />
+      <MovieList movies={loadedMovies} search={search} />
       <div id="bottom">
         {displayLoadMore && (
           <Button label="Load More" onClick={handleLoadMore} />

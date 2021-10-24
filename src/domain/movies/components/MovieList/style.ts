@@ -6,3 +6,12 @@ export const List = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
 `;
+
+export const NoResultWrapper = styled.div`
+  margin-top: 50px;
+  text-align: center;
+`;
+
+export const NoResultParagraph = styled.p`
+  font-size: 20px;
+`;

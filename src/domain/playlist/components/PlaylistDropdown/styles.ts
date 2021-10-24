@@ -12,6 +12,10 @@ export const Wrapper = styled.div<{ open: boolean }>(
     right: 0;
     transition: height 0.2s linear;
     z-index: 2;
+
+    ${theme.breakpoints.down("md")} {
+      min-width: 250px;
+    }
   `
 );
 
@@ -21,6 +25,10 @@ export const TitleContainer = styled.div(
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 10px;
+
+    ${theme.breakpoints.down("md")} {
+      margin-bottom: 30px;
+    }
   `
 );
 
@@ -29,6 +37,11 @@ export const ListItem = styled.li(
     border-bottom: 1px solid ${theme.color.darkGray};
     font-size: 14px;
     margin-bottom: 10px;
+
+    ${theme.breakpoints.down("md")} {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
   `
 );
 

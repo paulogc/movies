@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { KeyboardEvent, ChangeEvent, useState } from "react";
 import { useRouter } from "next/router";
 import { Button } from "../../../../ui/Button";
 import { SearchWrapper, StyledInput } from "./styles";
@@ -11,6 +11,12 @@ export const Search = () => {
     setSearch(event.target.value);
   };
 
+  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      handleClick();
+    }
+  };
+
   const handleClick = () => {
     if (search) {
       push(`/?search=${search}&page=1`);
@@ -20,7 +26,12 @@ export const Search = () => {
 
   return (
     <SearchWrapper>
-      <StyledInput onChange={handleChange} placeholder="Title" value={search} />
+      <StyledInput
+        onChange={handleChange}
+        onKeyDown={handleKeyDown}
+        placeholder="Title"
+        value={search}
+      />
       <Button onClick={handleClick} label="Search" />
     </SearchWrapper>
   );
