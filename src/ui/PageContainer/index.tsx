@@ -1,6 +1,8 @@
 import React from "react";
-import { PageWrapper } from "./styles";
+import { PageMain, PageArticle } from "./styles";
 
 export const PageContainer = ({ children }) => (
-  <PageWrapper>{children}</PageWrapper>
+  <PageMain>
+    <PageArticle>{children}</PageArticle>
+  </PageMain>
 );

@@ -1,10 +1,16 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const PageWrapper = styled.main`
+export const PageMain = styled.main(
+  ({ theme }) => css`
+    width: 100%;
+    display: block;
+    flex: 1 0 auto;
+    background-color: ${theme.background.favorite};
+  `
+);
+
+export const PageArticle = styled.article`
   max-width: 960px;
-  width: 100%;
   margin: 20px auto;
   padding: 10px;
-  display: block;
-  flex: 1 0 auto;
 `;

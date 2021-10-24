@@ -19,6 +19,7 @@ export default {
   },
   background: {
     blue: "#339FFF",
+    favorite: "#b9e8ea",
   },
   breakpoints: {
     xs: `${breakpointWidths.xs}px`,
