@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import { usePlaylistContext } from "../../../../app/context/PlaylistContext";
-import type { Movie } from "../../movies/types";
+import { usePlaylistContext } from "../../../../../app/context/PlaylistContext";
+import type { Movie } from "../../../movies/types";
 import { PlaylistDropdown } from "../PlaylistDropdown";
 import { Count, Wrapper, PlaylistButton } from "./styles";
 

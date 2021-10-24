@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { PlaylistCount } from "../../playlist/PlaylistCount";
+import { PlaylistCount } from "../../playlist/components/PlaylistCount";
 import { StyledHeader, Text } from "./styles";
 
 const Header = () => {

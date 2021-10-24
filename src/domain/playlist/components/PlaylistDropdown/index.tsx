@@ -7,7 +7,7 @@ import {
   StyledLink,
 } from "./styles";
 import Link from "next/link";
-import type { Movie } from "../../movies/types";
+import type { Movie } from "../../../movies/types";
 
 interface PlaylistDropdownProps {
   open: boolean;

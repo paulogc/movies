@@ -1,7 +1,12 @@
 import Image from "next/image";
 import { normalizeConfirmMovie } from "../../src/domain/confirm/helpers/normalizeMovile";
 import { PageContainer } from "../../src/ui/PageContainer";
-import { Title, ImageContainer, Information, ConfirmContainer } from "./styles";
+import {
+  Title,
+  ImageContainer,
+  Information,
+  ConfirmContainer,
+} from "../../src/domain/confirm/components/Page/styles";
 import type { ConfirmMovie } from "../../src/domain/confirm/types";
 import { usePlaylistContext } from "../../app/context/PlaylistContext";
 import { Button } from "../../src/ui/Button";
