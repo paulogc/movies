@@ -9,9 +9,12 @@ const Header = () => {
 
   return (
     <StyledFooter>
-      {isConfirmationScreen
-        ? `My favorite color is ${theme.background.favorite}`
-        : null}
+      {isConfirmationScreen ? (
+        <span>
+          My favorite color is{" "}
+          <span style={{ color: theme.background.skyBlue }}>Sky Blue</span>
+        </span>
+      ) : null}
     </StyledFooter>
   );
 };

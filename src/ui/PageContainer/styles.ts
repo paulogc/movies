@@ -5,7 +5,7 @@ export const PageMain = styled.main(
     width: 100%;
     display: block;
     flex: 1 0 auto;
-    background-color: ${theme.background.favorite};
+    background-color: ${theme.background.skyBlue};
   `
 );
 

@@ -16,10 +16,11 @@ export default {
     fontWhite: "#EAEFF4",
     darkGray: "#808489",
     lightGray: "#e3e7eb",
+    green: "#478423",
   },
   background: {
     blue: "#339FFF",
-    favorite: "#b9e8ea",
+    skyBlue: "#b9e8ea",
   },
   breakpoints: {
     xs: `${breakpointWidths.xs}px`,

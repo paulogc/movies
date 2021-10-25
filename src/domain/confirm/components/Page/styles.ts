@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Title = styled.h1`
   font-size: 26px;
@@ -21,3 +21,10 @@ export const ConfirmContainer = styled.div`
   margin: 30px 0;
   width: 100%;
 `;
+
+export const ConfirmedLabel = styled.span(
+  ({ theme }) => css`
+    font-size: 22px;
+    color: ${theme.color.green};
+  `
+);

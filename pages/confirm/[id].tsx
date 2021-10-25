@@ -6,6 +6,7 @@ import {
   ImageContainer,
   Information,
   ConfirmContainer,
+  ConfirmedLabel,
 } from "../../src/domain/confirm/components/Page/styles";
 import type { ConfirmMovie } from "../../src/domain/confirm/types";
 import { usePlaylistContext } from "../../app/context/PlaylistContext";
@@ -31,7 +32,7 @@ interface ConfirmPageProps {
 const Confirm = ({ movie }: ConfirmPageProps) => {
   const { playlist, confirmMovie } = usePlaylistContext();
 
-  const canConfirm = !!playlist[movie.id];
+  const isConfirmed = playlist[movie.id].confirmed;
 
   const handleConfirmMovie = () => {
     confirmMovie(movie.id);
@@ -49,8 +50,10 @@ const Confirm = ({ movie }: ConfirmPageProps) => {
       <Information>Country: {movie.country}</Information>
       <p>{movie.plot}</p>
       <ConfirmContainer>
-        {canConfirm && (
+        {!isConfirmed ? (
           <Button onClick={handleConfirmMovie} label="Confirm Movie" />
+        ) : (
+          <ConfirmedLabel>✓ Confirmed</ConfirmedLabel>
         )}
       </ConfirmContainer>
     </PageContainer>
