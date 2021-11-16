@@ -25,6 +25,9 @@ export const MovieItem = ({ movie }: MovieItemProps) => {
     }
   };
 
+  const posterUrl =
+    movie.poster === "N/A" ? "/images/placeholder" : movie.poster;
+
   return (
     <Wrapper>
       <AddButton

@@ -8,3 +8,5 @@ export const StyledFooter = styled.footer(
     padding: 15px;
   `
 );
+
+export const ChangeTheme = styled.input``;
